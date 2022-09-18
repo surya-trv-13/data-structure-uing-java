@@ -1,5 +1,6 @@
 package com.dsa.surya.bst;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class LinkedList {
@@ -58,4 +59,19 @@ public class LinkedList {
 		inOrderTraversal(node.right);
 	}
 	
+	public boolean searchData(Integer number) {
+		Node tempData = head;
+		while(true) {
+			if(Objects.equals(tempData.data, number)) {
+				return true;
+			} else if(number > tempData.data && null != tempData.right) {
+				tempData = tempData.right;
+			} else if(number < tempData.data && null != tempData.left) {
+				tempData = tempData.left;
+			}else {
+				return false;
+			}
+		}
+	}
 }
+
