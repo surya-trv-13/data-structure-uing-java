@@ -3,6 +3,18 @@ package com.dsa.surya.bst;
 import java.util.Objects;
 import java.util.Scanner;
 
+/**
+ * 
+ * @author suryanarayan.rath
+ * 
+ * This class is the implememtation and application of Binary Search Tree
+ * - Creation
+ * - Insertion
+ * - Search
+ * - Min Max find
+ *
+ */
+
 public class LinkedList {
 	private static Scanner scanner = new Scanner(System.in);
 	Node head;
@@ -72,6 +84,23 @@ public class LinkedList {
 				return false;
 			}
 		}
+	}
+	
+	public void findMinMax() {
+		Node tempNode = head;
+		
+		while(null != tempNode.left) {
+			tempNode = tempNode.left;
+		}
+		
+		System.out.println("Minimum Value :"+ tempNode.data);
+		tempNode = head;
+		
+		while(null != tempNode.right) {
+			tempNode = tempNode.right;
+		}
+		
+		System.out.println("Maximum Value :"+ tempNode.data);
 	}
 }
 

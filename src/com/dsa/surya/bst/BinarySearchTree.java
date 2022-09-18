@@ -8,6 +8,8 @@ public class BinarySearchTree {
 		LinkedList linkedList = new LinkedList();
 		linkedList.createBst();
 		linkedList.inOrderTraversal(linkedList.head);
+		
+		linkedList.findMinMax();
 
 		String choice; 
 		do {
