@@ -9,7 +9,7 @@ public class Knapsack01 {
 		Integer n = 4;
 		int maxProfit = knapsack01.knapsack(weight, value, W, n);
 		
-		System.out.println("Max Profit is :"+ maxProfit);
+		System.out.println("KnapSack 0/1 Recursive : Max Profit is :"+ maxProfit);
 	}
 	
 	public int knapsack(Integer[] weight, Integer[] value, Integer W, Integer n) {
