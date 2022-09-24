@@ -3,15 +3,23 @@ package com.dsa.surya.dynamicprograming;
 public class Knapsack01BottomUp {
 	public static void main(String[] args) {
 		Knapsack01BottomUp knapsack01BottomUp = new Knapsack01BottomUp();
-		Integer[] weight = new Integer[] {1,2,3,4};
-		Integer[] value = new Integer[] {3,7,6,5};
+		Integer[] weight = new Integer[] {1,3,4,7};
+		Integer[] value = new Integer[] {2,3,5,6};
 		Integer W = 7;
 		Integer n = 4;
+		Integer[][] t = knapsack01BottomUp.knapsack(weight, value, W, n);
 		
-		System.out.println("Knapsack 0/1 Bottom Up: Max Profit : "+ knapsack01BottomUp.knapsack(weight, value, W, n));
+		for(int i = 0; i < n+1; i++) {
+			for(int j = 0; j < W+1; j++) {
+				System.out.print(t[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("Knapsack 0/1 Bottom Up: Max Profit : "+ t[n][W]);
 	}
 	
-	public int knapsack(Integer[] wt, Integer[] val, Integer W, Integer n) {
+	public Integer[][] knapsack(Integer[] wt, Integer[] val, Integer W, Integer n) {
 		Integer[][] t = new Integer[n+1][W+1];
 		
 		for(int i = 0; i < n+1; i++) {
@@ -30,6 +38,6 @@ public class Knapsack01BottomUp {
 				}
 			}
 		}
-		return t[n][W];
+		return t;
 	}
 }
