@@ -1,4 +1,4 @@
-package com.dsa.surya.dynamicprograming;
+package com.dsa.surya.dynamicprograming.knapsack;
 
 import java.util.Arrays;
 

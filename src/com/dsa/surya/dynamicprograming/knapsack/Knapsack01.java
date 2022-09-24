@@ -1,4 +1,4 @@
-package com.dsa.surya.dynamicprograming;
+package com.dsa.surya.dynamicprograming.knapsack;
 
 public class Knapsack01 {
 	public static void main(String[] args) {
