@@ -3,9 +3,9 @@ package com.dsa.surya.dynamicprograming.knapsack.derivatives;
 public class CountSubsetSum {
 	public static void main(String[] args) {
 		CountSubsetSum countSubsetSum = new CountSubsetSum();
-		Integer[] arr = {2,3,5,8,10};
-		Integer sum = 10;
-		Integer n = 5;
+		Integer[] arr = {2,3,5,8,7,10};
+		Integer sum = 15;
+		Integer n = 6;
 		
 		Integer[][] t = countSubsetSum.countSubsetSum(arr, sum, n);
 		
